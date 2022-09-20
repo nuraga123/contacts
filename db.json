@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Нурага",
+      "username": "Nuraga",
+      "email": "nuraga@gmail.com",
+      "foto": "./images/users-fotos/user-foto.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Алекс",
+      "username": "Aleks",
+      "email": "aleks@gmail.com",
+      "foto": "./images/users-fotos/user-foto.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Ирина",
+      "username": "İrina",
+      "email": "irina@gmail.com",
+      "foto": "./images/users-fotos/user-foto.jpg"
+    }
+  ]
+}
