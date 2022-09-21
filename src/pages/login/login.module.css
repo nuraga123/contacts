@@ -1,8 +1,9 @@
 .form {
   margin: 100px auto 0;
-  width: 400px;
+  width: 300px;
 }
 
-.buttom {
-  
+.btn {
+  width: 100%;
+  margin: 0 0 10px 0;
 }

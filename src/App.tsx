@@ -1,27 +1,30 @@
-import React, { useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+import { ContactList } from './pages/contactList/ContactList';
+
+import { Login } from './pages/login/Login';
 
 import './App.css';
-import { Login } from './pages/login/Login';
-import { USERS_URL } from './shared/contacts';
+
 
 function App() {
-  useEffect(() => {
-    fetch(USERS_URL)
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-  }, [])
-
   return (
     <div className="App">
-      <Login></Login>
+      <Routes>
+
+        <Route
+          path='/login'
+          element={<Login />}
+        />
+
+        <Route
+          path='/contacts'
+          element={<ContactList />}
+        />
+
+      </Routes>
     </div>
   );
 }
 
 export default App;
-
-//<img
-//className='foto'
-//src="./images/users-fotos/user-foto.jpg"
-//alt="user-foto"
-///>

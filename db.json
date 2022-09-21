@@ -2,23 +2,60 @@
   "users": [
     {
       "id": 1,
+      "phone": "055",
       "name": "Нурага",
-      "username": "Nuraga",
+      "userName": "Nuraga",
       "email": "nuraga@gmail.com",
       "foto": "./images/users-fotos/user-foto.jpg"
     },
     {
       "id": 2,
+      "phone": "055",
       "name": "Алекс",
-      "username": "Aleks",
+      "userName": "Aleks",
       "email": "aleks@gmail.com",
       "foto": "./images/users-fotos/user-foto.jpg"
     },
     {
       "id": 3,
+      "phone": "055",
       "name": "Ирина",
-      "username": "İrina",
+      "userName": "İrina",
       "email": "irina@gmail.com",
+      "foto": "./images/users-fotos/user-foto.jpg"
+    }
+  ],
+  "contacts-list": [
+    {
+      "id": 51,
+      "phone": "51",
+      "name": "Marco",
+      "userName": "Polo",
+      "email": "nuraga@gmail.com",
+      "foto": "./images/users-fotos/user-foto.jpg"
+    },
+    {
+      "id": 52,
+      "phone": "52",
+      "name": "Estela",
+      "userName": "Star",
+      "email": "nuraga@gmail.com",
+      "foto": "./images/users-fotos/user-foto.jpg"
+    },
+    {
+      "id": 53,
+      "phone": "53",
+      "name": "Jim",
+      "userName": "Pask",
+      "email": "nuraga@gmail.com",
+      "foto": "./images/users-fotos/user-foto.jpg"
+    },
+    {
+      "id": 54,
+      "phone": "54",
+      "name": "Lorena",
+      "userName": "Cubo",
+      "email": "nuraga@gmail.com",
       "foto": "./images/users-fotos/user-foto.jpg"
     }
   ]

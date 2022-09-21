@@ -1,6 +1,8 @@
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Form, Input } from 'antd';
+import { Alert, Button, Form, Input } from 'antd';
 import { Typography } from 'antd';
+import { useState } from 'react';
+import { USERS_URL } from '../../shared/contacts';
 
 import styles from './login.module.css';
 
@@ -10,9 +12,34 @@ type LoginValues = {
   userName: string;
 }
 
+type UserItem = {
+  name: string,
+  phone: string
+  email: string,
+  avatar: string,
+  id: string,
+  userName: string
+}
+
 export const Login = () => {
-  const onFinish = ({ userName }: LoginValues) => {
-    console.log('Received values of form: ', userName);
+
+  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false)
+
+  const onFinish = async ({ userName }: LoginValues) => {
+    setIsLoading(true);
+
+    const response = await fetch(USERS_URL)
+
+    const usersList: UserItem[] = await response.json()
+
+    const foundUser = usersList
+      .find((user) => user.userName === userName)
+
+    foundUser ? setError('')
+      : setError('нету пользователя');
+
+    setIsLoading(false)
   };
 
   return (
@@ -58,18 +85,24 @@ export const Login = () => {
 
       <Form.Item>
         <Button
+          loading={isLoading}
           type="primary"
           htmlType="submit"
-          className="login-form-button"
+          className={styles.btn}
         >
           Вход
         </Button>
+
+        <br></br>
+
         <div>
           <a href="3">
             Зарегистрироваться
           </a>
         </div>
       </Form.Item>
+
+      {error && <Alert message='нет имени!!!' type='error' />}
     </Form>
   )
 }
